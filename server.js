@@ -13,11 +13,21 @@ app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
+if(process.env.NODE_ENV==='production'){
+  var connectionObject = {
+  host: "bmsyhziszmhf61g1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "rqcelfx8fix8aph7",
+  password: " vd1f2cmd3ldtan53",
+  database: "c6wd0m21tutvglig" }
+}else{
+ var connectionObject= {
   host: "localhost",
   user: "root",
   password: "dhaka3049",
-  database: "fifagame" });
+  database: "fifagame" }
+}
+
+var connection = mysql.createConnection(connectionObject);
 
 connection.connect(function(err) {
   if (err) {
