@@ -78,12 +78,12 @@ app.post("/topTenClub", function(req, res) {
 });
 //========================================
 app.post("/insertName", function(req, res) {
-  connection.query("INSERT INTO editnametest (Name) VALUE (?) , [req.body.name];", function(err, data) {
+  connection.query("INSERT INTO editnametest (Name) VALUE (?)" , [req.body.name], function(err, data) {
     if (err) {
       throw err;
     }
       });   
-  connection.query("SELECT * FROM editnametest ;", function(err, data) {
+  connection.query("SELECT * FROM editnametest ORDER BY id DESC;", function(err, data) {
     if (err) {
       throw err;
     }
@@ -95,7 +95,7 @@ app.post("/insertName", function(req, res) {
 //==========================================
 
 app.post("/deleteName", function(req, res) {
-  connection.query("DELETE FROM editnametest WHERE Name= VALUE (?) , [req.body.name];", function(err, data) {
+  connection.query("DELETE FROM editnametest WHERE Name=? " , [req.body.name], function(err, data) {
     if (err) {
       throw err;
     }
@@ -109,14 +109,15 @@ app.post("/deleteName", function(req, res) {
 
   });
 });
-//==========================================
+//=================================================================
+//=================================================================
 
 app.post("/updateName", function(req, res) {
- // connection.query("UPDATE editnametest SET Name= (?) , [req.body.name] WHERE Name= Name= (?) , [req.body.name];", function(err, data) {
-//    if (err) {
-//      throw err;
-//    }
- //     });   
+  connection.query("UPDATE editnametest SET Name= ? WHERE Name= ?", [req.body.name, req.body.name], function(err, data) {
+    if (err) {
+      throw err;
+    }
+      });   
   connection.query("SELECT * FROM editnametest ;", function(err, data) {
     if (err) {
       throw err;
@@ -130,3 +131,4 @@ app.post("/updateName", function(req, res) {
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
+
