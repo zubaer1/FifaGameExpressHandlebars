@@ -1,10 +1,10 @@
 
-<style type="text/css">
-		#imgName{
+ <!--   <style type="text/css">
+		.imgName{
 			float: left;
 			margin-right: 10px;
 		}
-</style>
+</style>   -->
 
 <img src="assets\imagesHome\05.jpg" class="img-circle"  width="100" height="70">
 <img src="assets\imagesHome\06.jpg" class="img-rounded" width="100" height="70">
@@ -22,11 +22,11 @@
 <ol>
 	{{#each playernames1}}
 		<li>	
-		<img id="imgName" src="assets\images\{{{this.Name}}}.png" class="img-rounded" width="70" height="50">		
+		<img class="imgName" src="assets/images/{{this.Name}}.png" class="img-rounded" width="70" height="50">		
 		<p>Name:  {{this.Name}}</p>			
 		</li>
 	{{/each}}
-</0l>
+</ol>
 
 <!--==============
 src="assets\images\{{{this.Name}}}.png"
