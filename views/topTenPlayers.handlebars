@@ -1,0 +1,39 @@
+<style type="text/css">
+		#imgName{
+			float: left;
+			margin-right: 10px;
+		}
+</style>
+
+<img src="assets\imagesHome\05.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\06.jpg" class="img-rounded" width="100" height="70">
+
+
+<img src="assets\imagesHome\01.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\02.jpg" class="img-rounded"  width="100" height="70">
+
+<img src="assets\imagesHome\03.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\04.jpg" class="img-rounded"  width="100" height="70">
+
+
+<h3>Top Ten Players:</h3>
+<hr>
+<!--==========================-->
+
+
+<ol>
+	{{#each playernames1}}
+		<li>
+		<img id="imgName" src="\assets\images\Cristiano Ronaldo.png" class="img-circle" width="100" height="100">
+
+		<p>Name: {{this.Name}}</p>
+		<p>Nationality: {{this.Nationality}}</p>
+					
+		</li>
+	{{/each}}
+</ol>
+
+<!--==============
+<p>ID: {{this.id}}</p>
+<p>URL: {{this.url}}</p>
+============-->

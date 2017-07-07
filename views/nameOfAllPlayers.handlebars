@@ -1,0 +1,34 @@
+
+<style type="text/css">
+		#imgName{
+			float: left;
+			margin-right: 10px;
+		}
+</style>
+
+<img src="assets\imagesHome\05.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\06.jpg" class="img-rounded" width="100" height="70">
+<img src="assets\imagesHome\03.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\04.jpg" class="img-rounded"  width="100" height="70">
+
+<img src="assets\imagesHome\01.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\02.jpg" class="img-rounded"  width="100" height="70">
+
+<h3>Name of players</h3>
+<hr>
+<!--==========================-->
+
+
+<ol>
+	{{#each playernames1}}
+		<li>	
+		<img id="imgName" src="assets\images\{{{this.Name}}}.png" class="img-rounded" width="70" height="50">		
+		<p>Name:  {{this.Name}}</p>			
+		</li>
+	{{/each}}
+</0l>
+
+<!--==============
+src="assets\images\{{{this.Name}}}.png"
+  
+============-->

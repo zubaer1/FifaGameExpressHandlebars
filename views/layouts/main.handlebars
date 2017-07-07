@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example App</title>
+
+	<link rel="stylesheet"
+				href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+<div class="container">
+		<nav class="navbar navbar-inverse ">
+		  <ul class="nav navbar-nav navbar-right">
+		   <li><a href="Home">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+			
+		  </ul>
+		  <p class="navbar-text">FIFA Players information</p>
+		</nav>
+<!-- *************************************** -->
+<div class="row">
+  <div class="col-md-3">
+
+      <form action="/allPlayers" method="POST">
+        <input type="hidden" name="id" value="nameOfPlayers">
+        <button type="submit" class="btn btn-success" >All Players with picture</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/detailsPlayers" method="POST">
+        <input type="text" name="details" value="">
+        <button type="submit" class="btn btn-success" >Details of player (write name)</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/topTenPlayer" method="POST">
+        <input type="hidden" name="id" value="nameOfPlayers">
+        <button type="submit" class="btn btn-success" >Top Ten Players</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/topTenClub" method="POST">
+        <input type="hidden" name="id" value="nameOfPlayers">
+        <button type="submit" class="btn btn-success" >Top Ten Club</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/insertName" method="POST">
+        <input type="text" name="name" value="">
+        <button type="submit" class="btn btn-success" >INSERT</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/delete" method="POST">
+        <input type="text" name="nameDe" value="">
+        <button type="submit" class="btn btn-success" >DELETE</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+      <form action="/update" method="POST">
+        <input type="text" name="nameUp" value="">
+        <button type="submit" class="btn btn-success" >UPDATE</button>     
+        <br><br>
+      </form>
+
+<!-- *************************************** -->
+
+
+
+  </div>
+<!-- *************************************** -->
+  <div class="col-md-9">
+   <div class="jumbotron" id="jumbotronLeft">
+
+	{{{body}}}
+
+  </div>
+</div>
+<!-- *************************************** -->
+	<footer>
+		<h5 class="text-center">&copy; assignment by zubaer</h5>
+	</footer>
+</div>
+
+<script src="controller.js"></script>
+</body>
+</html>

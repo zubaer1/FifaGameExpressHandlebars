@@ -1,0 +1,47 @@
+<style type="text/css">
+		#imgName{
+			float: left;
+			margin-right: 10px;
+		}
+</style>
+
+<img src="assets\imagesHome\05.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\02.jpg" class="img-rounded"  width="100" height="70">
+
+<img src="assets\imagesHome\03.jpg" class="img-circle"  width="100" height="70">
+<img src="assets\imagesHome\06.jpg" class="img-rounded" width="100" height="70">
+
+
+<img src="assets\imagesHome\01.jpg" class="img-circle"  width="100" height="70">
+
+<img src="assets\imagesHome\04.jpg" class="img-rounded"  width="100" height="70">
+
+
+
+
+<!--=======<p>Name: {{this.Name}}</p>===================-->
+<ul>
+	{{#each playernames1}}
+		<li>	
+		<img id="imgName" src="\assets\images\Cristiano Ronaldo.png" class="img-circle"  width="350" height="400">		
+			
+		<p>Name: {{this.Name}}</p>
+		<p>Nationality: {{this.Nationality}}</p>
+		<p>Club: {{this.Club}}</p> 
+		<p>Age: {{this.Age}}</p>
+		<p>Aggression: {{this.Aggression}}</p>
+		<p>Reactions: {{this.Reactions}}</p>
+		<p>Speed: {{this.Speed}}</p>
+		<p>Height: {{this.Club}}</p>
+		<p>Weight: {{this.Weight}}</p>		
+		</li><br><br>
+	{{/each}}
+</ul>
+
+<!--==============
+<img id="imgName" src="images\{{this.Name}}.png" class="img-circle" alt="Cinque Terre" width="50" height="50">
+
+
+	<img id="imgName" src="images\<p>{{this.Name}}</p>.png" class="img-circle" alt="Cinque Terre" width="300" height="400">	
+
+============-->
